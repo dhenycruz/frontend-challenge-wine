@@ -1,0 +1,21 @@
+import Image from 'next/image';
+import { Nav } from './NavbarStyled';
+import Logo from '../../../public/images/logo.png';
+import { Menu } from './menu/Menu';
+import { WineBox } from './Winebox/WineBox';
+import { Perfil } from './Perfil/Perfil';
+import { Search } from './Search/Search';
+
+export const Navbar = () => (
+  <Nav>
+    <div className="logo-menu">
+      <Image src={Logo} alt="Logo Wine" width={102.95} height={31} />
+      <Menu />
+    </div>
+    <div className="buttons-left">
+      <Search />
+      <Perfil />
+      <WineBox />
+    </div>
+  </Nav>
+);
