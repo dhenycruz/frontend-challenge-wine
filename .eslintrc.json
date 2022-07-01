@@ -42,7 +42,8 @@
           "namedComponents": "arrow-function",
           "unnamedComponents": "arrow-function"
         }
-      ]  
+      ],
+      "import/prefer-default-export": "off"
   },
   "settings": { // resolvendo problendo com import/resolver
     "import/resolver": {
