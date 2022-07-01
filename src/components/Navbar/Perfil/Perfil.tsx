@@ -13,6 +13,10 @@ const PerfilDiv = styled.div`
   justify-content: center;
   margin-left: 24px;
   width: 56px;
+  
+  @media (max-width: 787.98px) {
+    display: none;
+  }
 `;
 
 export const Perfil = () => (

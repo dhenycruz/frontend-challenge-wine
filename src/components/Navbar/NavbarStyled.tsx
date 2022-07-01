@@ -18,9 +18,20 @@ export const Nav = styled.nav`
     flex-direction: row;
   }
 
+  .menu-mobile {
+    display: none;
+    margin-right: 30px;
+  }
+
   .buttons-left {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  @media (max-width: 787.98px) {
+    .menu-mobile {
+      display: block;
+    }
   }
 `;

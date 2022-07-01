@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 const MenuDiv = styled.div`
   margin-left: 30px;
+  display: block;
 
   ul {
     list-style: none;
@@ -32,6 +33,9 @@ const MenuDiv = styled.div`
     border-bottom: 2px solid #D14B8F;
   }
 
+  @media (max-width: 787.98px) {
+    display: none;
+  }
 `;
 
 export const Menu = () => (
