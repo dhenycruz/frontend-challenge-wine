@@ -16,4 +16,12 @@ export const GlobalStyles = createGlobalStyle<{ theme: ThemeType }>`
     background-color: #F5F5F5;
     font-family: 'Titillium Web', sans-serif;
   }
+
+  main {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+  }
 `;

@@ -1,11 +1,14 @@
-import { Divider } from '../components/Divider';
 import { Navbar } from '../components/Navbar/NavBar';
+import { Asidebar } from '../components/Asidebar/Asidebar';
+import { Section } from '../components/Section/Section';
 
 const Home = () => (
   <>
     <Navbar />
-    <Divider />
-    <h1>Wine</h1>
+    <main>
+      <Asidebar />
+      <Section />
+    </main>
   </>
 );
 
