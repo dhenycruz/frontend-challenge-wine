@@ -18,6 +18,14 @@ const PaginationDiv = styled.div`
     margin-left: 2px;
     margin-right: 10px;
   }
+
+  @media (max-width: 412.98px) {
+    display: none;
+  }
+
+  @media (min-width: 413px) and (max-width: 531.98px) {
+    display: none;
+  }
 `;
 
 const ButtonPage = styled.button<{ active: Boolean }>`

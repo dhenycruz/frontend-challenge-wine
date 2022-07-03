@@ -27,11 +27,28 @@ const SectionStyle = styled.section`
 
 const ListGrid = styled.div`
   display: grid;
+  justify-items: center;
   grid-template-columns: auto auto auto;
   margin-top: 27px;
+
+  @media (max-width: 531.98px) {
+    grid-template-columns: auto auto;
+  }
+
+  @media (min-width: 532px) and (max-width: 575.98px) {
+    grid-template-columns: auto auto;
+  }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    grid-template-columns: auto auto;
+  }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+
+  }
+  @media (min-width: 991.99px) {
+  }
 `;
 
-const array = [0, 1, 2, 3, 4, 5, 6, 7, 8];
+const array = [1, 2, 3, 4, 5, 6, 7, 8];
 
 export const Section = () => (
   <SectionStyle>

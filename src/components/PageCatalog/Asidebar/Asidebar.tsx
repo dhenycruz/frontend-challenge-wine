@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 
 const AsideBar = styled.aside`
-  width: 256px;
+  display: block;
   padding-left: 5px;
+  width: 256px;
 
   h4 {
     font-weight: bolder;
@@ -35,6 +36,17 @@ const AsideBar = styled.aside`
 
   li input {
     margin-right: 5px;
+  }
+  @media (max-width: 575.98px) {
+    display: none;
+  }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    display: none;
+  }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    display: none;
+  }
+  @media (min-width: 991.99px) {
   }
 `;
 

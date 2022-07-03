@@ -15,7 +15,6 @@ export const GlobalStyles = createGlobalStyle<{ theme: ThemeType }>`
   body {
     background-color: #F5F5F5;
     font-family: 'Titillium Web', sans-serif;
-    overflow-x: hidden;
   }
 
   main {

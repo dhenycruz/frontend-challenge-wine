@@ -6,6 +6,14 @@ const Card = styled.div`
   width: 256px;
   height: 387px;
   margin-bottom: 20px;
+
+  @media (max-width: 412.98px) {
+    width: 160px;
+  }
+
+  @media (min-width: 413px) and (max-width: 531.98px) {
+    width: 200px;
+  }
 `;
 
 const BoxInfo = styled.div`
@@ -94,6 +102,14 @@ const BoxInfo = styled.div`
     text-transform: uppercase;
     margin-top: 7px;
   }
+
+  @media (max-width: 412.98px) {
+    width: 160px;
+  }
+
+  @media (min-width: 413px) and (max-width: 531.98px) {
+    width: 200px;
+  }
 `;
 
 const Button = styled.button`
@@ -112,6 +128,14 @@ const Button = styled.button`
   font-weight: 900;
   font-size: 14px;
   line-height: 16px;
+
+  @media (max-width: 412.98px) {
+    width: 160px;
+  }
+
+  @media (min-width: 413px) and (max-width: 531.98px) {
+    width: 200px;
+  }
 `;
 
 export const ProductCard = () => (
