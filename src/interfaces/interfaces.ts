@@ -7,13 +7,14 @@ export interface Product {
   priceMember: number,
   priceNonMember: number,
   type: string,
-  classifcation: string,
+  classification: string,
   volume: string,
+  size: string,
   Rating: number,
   rating: number,
   country: string,
   region: string,
-  flag: number,
+  flag: string,
   sommelierComment: string,
 }
 

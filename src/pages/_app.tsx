@@ -1,5 +1,6 @@
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
+import { ProductProvider } from '../context/ProductContext';
 import { GlobalStyles } from '../themes/globalStyles';
 import { Theme } from '../themes/themes';
 
@@ -14,7 +15,9 @@ const MyApp = ({ Component, pageProps }: AppProps) => (
     </Head>
     <Theme>
       <GlobalStyles />
-      <Component {...pageProps} />
+      <ProductProvider>
+        <Component {...pageProps} />
+      </ProductProvider>
     </Theme>
   </>
 );

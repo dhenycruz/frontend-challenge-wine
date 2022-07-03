@@ -1,12 +1,6 @@
 import styled from 'styled-components';
-import Image from 'next/image';
-import Eua from '../../../public/images/spain.png';
-import StarYellow from '../../../public/images/star-yellow.png';
-import StarGray from '../../../public/images/star-gray.png';
-import ProductImage from '../../../public/images/productdetails.png';
-import { ButtonAddMobile } from './ButttonAddMobile';
 
-const InfoDiv = styled.div`
+export const InfoDiv = styled.div`
   width: 494.22px;
   height: 580px;
 
@@ -51,7 +45,7 @@ const InfoDiv = styled.div`
   }
 `;
 
-const Location = styled.div`
+export const Location = styled.div`
   @media (max-width: 575.98px) {
     display: flex;
     justify-content: center;
@@ -62,7 +56,7 @@ const Location = styled.div`
   }
 `;
 
-const InfoAndAvaliable = styled.div`
+export const InfoAndAvaliable = styled.div`
   display: flex;
   align-items: center;
   margin-top: 8px;
@@ -109,7 +103,7 @@ const InfoAndAvaliable = styled.div`
   }
 `;
 
-const ImageProductMobile = styled.div`
+export const ImageProductMobile = styled.div`
   display: none;
   align-items: center;
   justify-content: center;
@@ -124,7 +118,7 @@ const ImageProductMobile = styled.div`
   }
 `;
 
-const PriceProduct = styled.div`
+export const PriceProduct = styled.div`
   margin-top: 52px;
 
   .currency {
@@ -163,7 +157,7 @@ const PriceProduct = styled.div`
   }
 `;
 
-const ComentSommelier = styled.div`
+export const ComentSommelier = styled.div`
   margin-top: 48px;
 
   h6 {
@@ -181,7 +175,7 @@ const ComentSommelier = styled.div`
   }
 `;
 
-const ButtonAdd = styled.div`
+export const ButtonAdd = styled.div`
   background-color: #7ebc43;
   border-radius: 4px;
   display: flex;
@@ -256,67 +250,9 @@ const ButtonAdd = styled.div`
   }
 `;
 
-const Divider = styled.div`
+export const Divider = styled.div`
   border: 1px solid #fff;
   height: 33px;
   width: 2px;
   opacity: 10%;
 `;
-
-export const InfoProduct = () => (
-  <InfoDiv>
-    <Location>
-      <span>Vinhos</span>
-      <span className="arrow">{'>'}</span>
-      <span>Estados Unidos</span>
-      <span className="arrow">{'>'}</span>
-      <span className="span-last">Califórnia</span>
-    </Location>
-    <h3>Aphothic Red 2019</h3>
-    <InfoAndAvaliable>
-      <Image src={Eua} alt="Bandeira país" width={16} height={16} />
-      <span>Estados Unidos Tinto Meio Seco/Demi-Sec 750ml</span>
-      <div className="star">
-        <Image src={StarYellow} alt="estrela avaliação" width={14.4} height={13.2} />
-        <Image src={StarYellow} alt="estrela avaliação" width={14.4} height={13.2} />
-        <Image src={StarYellow} alt="estrela avaliação" width={14.4} height={13.2} />
-        <Image src={StarYellow} alt="estrela avaliação" width={14.4} height={13.2} />
-        <Image src={StarGray} alt="estrela avaliação" width={14.4} height={13.2} />
-        <p>(2)</p>
-      </div>
-    </InfoAndAvaliable>
-    <ImageProductMobile>
-      <Image src={ProductImage} alt="Imagem do Produto" width={218} height={333} />
-    </ImageProductMobile>
-    <PriceProduct>
-      <span className="currency">R$</span>
-      <span className="price">63,</span>
-      <span className="currency">67</span>
-      <p>NÃO SÓCIO R$ 120,95/un.</p>
-    </PriceProduct>
-    <ComentSommelier>
-      <h6>Comentário do Sommelier</h6>
-      <p>
-        Produzido no terroir californiano, esse tinto mescla as variedades
-        Zinfandel, Syrah, Cabernet Sauvignon e Merlot. Apothic é um vinho
-        inspirado nas antigas Apothecas (adegas subterrâneas), um lugar
-        misterioso onde há mais de 800 anos os viticultores misturavam e
-        armazenavam seus cobiçados vinhos.
-      </p>
-    </ComentSommelier>
-    <ButtonAdd>
-      <div className="product-qty">
-        <div className="button-qty">
-          <span className="disabled">-</span>
-          <span className="quantity">1</span>
-          <span>+</span>
-        </div>
-      </div>
-      <Divider />
-      <div className="button">
-        Adicionar
-      </div>
-    </ButtonAdd>
-    <ButtonAddMobile />
-  </InfoDiv>
-);

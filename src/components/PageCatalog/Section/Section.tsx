@@ -1,4 +1,6 @@
+import { useContext } from 'react';
 import styled from 'styled-components';
+import { ProductContext } from '../../../context/ProductContext';
 import { Pagination } from '../Pagination/Pagination';
 import { ProductCard } from '../ProductCard/ProductCard';
 
@@ -48,17 +50,19 @@ const ListGrid = styled.div`
   }
 `;
 
-const array = [1, 2, 3, 4, 5, 6, 7, 8];
-
-export const Section = () => (
-  <SectionStyle>
-    <h4>
-      <strong>49</strong>
-      produtos encontrados
-    </h4>
-    <ListGrid>
-      { array.map(() => <ProductCard />)}
-    </ListGrid>
-    <Pagination />
-  </SectionStyle>
-);
+export const Section = () => {
+  const { products, totalProducts } = useContext(ProductContext);
+  return (
+    <SectionStyle>
+      <h4>
+        <strong>{totalProducts}</strong>
+        produtos encontrados
+      </h4>
+      <ListGrid>
+        { products.length >= 1 && (
+          products.map((product) => <ProductCard key={product.id} product={product} />))}
+      </ListGrid>
+      <Pagination />
+    </SectionStyle>
+  );
+};
