@@ -19,6 +19,18 @@ const DivButtonBack = styled.div`
     line-height: 24px;
     color: #111;
   }
+
+  @media (max-width: 575.98px) {
+    display: none;
+  }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    display: none;
+  }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    span {
+      margin-left: 20px;
+    }
+  }
 `;
 
 export const ButtonBack = () => (

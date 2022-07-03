@@ -3,6 +3,8 @@ import Image from 'next/image';
 import Eua from '../../../public/images/spain.png';
 import StarYellow from '../../../public/images/star-yellow.png';
 import StarGray from '../../../public/images/star-gray.png';
+import ProductImage from '../../../public/images/productdetails.png';
+import { ButtonAddMobile } from './ButttonAddMobile';
 
 const InfoDiv = styled.div`
   width: 494.22px;
@@ -36,6 +38,28 @@ const InfoDiv = styled.div`
     line-height: 32px;
     margin-top: 16px;
   }
+
+  @media (max-width: 575.98px) {
+    h3 {
+      text-align: center;
+    }
+  }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    h3 {
+      text-align: center;
+    }
+  }
+`;
+
+const Location = styled.div`
+  @media (max-width: 575.98px) {
+    display: flex;
+    justify-content: center;
+  }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    display: flex;
+    justify-content: center;
+  }
 `;
 
 const InfoAndAvaliable = styled.div`
@@ -50,12 +74,23 @@ const InfoAndAvaliable = styled.div`
     font-weight: 400;
     line-break: 24px;
     margin-left: 5px;
+    word-spacing: 5px;
   }
 
   .star {
     width: 100px;
     display: flex;
     flex-direction: row;
+
+    @media (max-width: 575.98px) {
+      display: none;
+    }
+    @media (min-width: 576px) and (max-width: 767.98px) {
+      display: none;
+    }
+    @media (min-width: 768px) and (max-width: 991.98px) {
+      display: none;
+    }
   }
   .star p {
     margin-left: 5px;
@@ -64,6 +99,28 @@ const InfoAndAvaliable = styled.div`
     font-size: 12px;
     font-weight: 400;
     line-height: 16px;
+  }
+
+  @media (max-width: 575.98px) {
+    justify-content: center;
+  }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    justify-content: center;
+  }
+`;
+
+const ImageProductMobile = styled.div`
+  display: none;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  margin-bottom: 16px;
+
+  @media (max-width: 575.98px) {
+    display: flex;
+  }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    display: flex
   }
 `;
 
@@ -96,6 +153,13 @@ const PriceProduct = styled.div`
     font-weight: 700;
     font-size: 16px;
     line-height: 19.2px;
+  }
+
+  @media (max-width: 575.98px) {
+    display: none;
+  }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    display: none;
   }
 `;
 
@@ -183,6 +247,13 @@ const ButtonAdd = styled.div`
     justify-content: center;
     width: 49%;
   }
+
+  @media (max-width: 575.98px) {
+    display: none;
+  }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    display: none;
+  }
 `;
 
 const Divider = styled.div`
@@ -194,20 +265,17 @@ const Divider = styled.div`
 
 export const InfoProduct = () => (
   <InfoDiv>
-    <header>
+    <Location>
       <span>Vinhos</span>
       <span className="arrow">{'>'}</span>
       <span>Estados Unidos</span>
       <span className="arrow">{'>'}</span>
       <span className="span-last">Califórnia</span>
-    </header>
+    </Location>
     <h3>Aphothic Red 2019</h3>
     <InfoAndAvaliable>
       <Image src={Eua} alt="Bandeira país" width={16} height={16} />
-      <span>Estados Unidos</span>
-      <span>Tinto</span>
-      <span>Meio Seco/Demi-Sec</span>
-      <span>750 ml</span>
+      <span>Estados Unidos Tinto Meio Seco/Demi-Sec 750ml</span>
       <div className="star">
         <Image src={StarYellow} alt="estrela avaliação" width={14.4} height={13.2} />
         <Image src={StarYellow} alt="estrela avaliação" width={14.4} height={13.2} />
@@ -217,6 +285,9 @@ export const InfoProduct = () => (
         <p>(2)</p>
       </div>
     </InfoAndAvaliable>
+    <ImageProductMobile>
+      <Image src={ProductImage} alt="Imagem do Produto" width={218} height={333} />
+    </ImageProductMobile>
     <PriceProduct>
       <span className="currency">R$</span>
       <span className="price">63,</span>
@@ -246,5 +317,6 @@ export const InfoProduct = () => (
         Adicionar
       </div>
     </ButtonAdd>
+    <ButtonAddMobile />
   </InfoDiv>
 );
