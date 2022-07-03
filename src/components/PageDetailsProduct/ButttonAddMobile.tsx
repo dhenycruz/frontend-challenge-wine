@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const FooterButton = styled.div`
-  display: flex;
+  display: none;
   position: fixed;
   bottom: 0;
   right: 0;
@@ -10,20 +10,31 @@ const FooterButton = styled.div`
   height: 88px;
   background-color: #fff;
   
-  .price {
-    align-items: center;
+  .price-mobile {
+    align-items: center;;
     display: flex;
     flex-direction: column;
     width: 50%;
   }
 
-  .price .no-socio {
+  .price-mobile p {
+    color: #555;
+    font-family: 'Lato', sans-serif;
+    line-height: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: line-through;
+    text-transform: uppercase;
+  }
+
+  .price-mobile .no-socio {
     color: #888888;
     font-family: 'Lato', sans-serif;
     font-style: normal;
     font-weight: 900;
     font-size: 12px;
     line-height: 14px;
+    text-decoration: none;
     text-transform: uppercase;
     margin-top: 7px;
   }
@@ -46,14 +57,21 @@ const FooterButton = styled.div`
     bottom: 76px;
     left: 30px;
   }
+
+  @media (max-width: 575.98px) {
+    display: flex;
+  }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    display: flex;
+  }
 `;
 
 const PriceProduct = styled.div`
   display: flex;
-
+  align-items: end;
   .currency {
     font-family: 'Lato', sans-serif;
-    font-size: 20px;
+    font-size: 12px;
     font-weight: 700;
     line-height: 28px;
     margin: 0;
@@ -107,7 +125,7 @@ const Button = styled.button`
 export const ButtonAddMobile = () => (
   <FooterButton>
     <span className="promotion">60% OFF</span>
-    <div className="price">
+    <div className="price-mobile">
       <p>R$ 30.007,40</p>
       <PriceProduct>
         <span className="currency">R$</span>
