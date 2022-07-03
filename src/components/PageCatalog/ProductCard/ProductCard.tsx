@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Image from 'next/image';
-import ProductExample from '../../../public/images/productexample.png';
+import ProductExample from '../../../../public/images/productexample.png';
 
 const Card = styled.div`
   width: 256px;

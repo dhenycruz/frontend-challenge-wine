@@ -5,7 +5,6 @@ import { ProductCard } from '../ProductCard/ProductCard';
 const SectionStyle = styled.section`
   display: flex;
   flex-direction: column;
-  margin-top: 127px;
   width: 832px;
   height: 100%;
   padding-left: 5px;

@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 const AsideBar = styled.aside`
   width: 256px;
-  margin-top: 127px;
   padding-left: 5px;
 
   h4 {

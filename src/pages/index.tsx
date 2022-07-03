@@ -1,6 +1,6 @@
 import { Navbar } from '../components/Navbar/NavBar';
-import { Asidebar } from '../components/Asidebar/Asidebar';
-import { Section } from '../components/Section/Section';
+import { Asidebar } from '../components/PageCatalog/Asidebar/Asidebar';
+import { Section } from '../components/PageCatalog/Section/Section';
 
 const Home = () => (
   <>

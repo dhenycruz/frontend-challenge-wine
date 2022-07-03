@@ -8,9 +8,6 @@ export const Nav = styled.nav`
   display: flex;
   height: 88.23px;
   justify-content: space-around;
-  position: fixed;
-  width: 100%;
-  z-index: 100;
 
   .logo-menu {
     display: flex;

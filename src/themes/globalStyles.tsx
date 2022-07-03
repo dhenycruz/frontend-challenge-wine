@@ -15,6 +15,7 @@ export const GlobalStyles = createGlobalStyle<{ theme: ThemeType }>`
   body {
     background-color: #F5F5F5;
     font-family: 'Titillium Web', sans-serif;
+    overflow-x: hidden;
   }
 
   main {
@@ -22,6 +23,6 @@ export const GlobalStyles = createGlobalStyle<{ theme: ThemeType }>`
     justify-content: center;
     width: 100vw;
     height: 100vh;
-    overflow-x: hidden;
+    margin-top: 35px;
   }
 `;
