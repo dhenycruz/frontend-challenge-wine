@@ -1,6 +1,8 @@
+import { useEffect, useContext } from 'react';
 import Image from 'next/image';
 import styled from 'styled-components';
 import Bitmap from '../../../../public/images/Bitmap.png';
+import { ProductContext } from '../../../context/ProductContext';
 
 const Wine = styled.div`
   align-items: center;
@@ -36,9 +38,21 @@ const TotalCart = styled.div`
   border-radius: 50%;
 `;
 
-export const WineBox = () => (
-  <Wine>
-    <Image src={Bitmap} alt="carrinho de compras" width={40} height={56} />
-    <TotalCart>0</TotalCart>
-  </Wine>
-);
+export const WineBox = () => {
+  const { cart, setCart } = useContext(ProductContext);
+
+  useEffect(() => {
+    if (localStorage.getItem('wineCard')) {
+      const cartLocal = localStorage.getItem('wineCard');
+      const cartL = JSON.parse(cartLocal as string);
+      localStorage.setItem('wineCard', JSON.stringify(cartL));
+      setCart(cartL);
+    }
+  }, []);
+  return (
+    <Wine>
+      <Image src={Bitmap} alt="carrinho de compras" width={40} height={56} />
+      <TotalCart>{ cart.length }</TotalCart>
+    </Wine>
+  );
+};

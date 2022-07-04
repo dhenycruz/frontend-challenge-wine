@@ -1,14 +1,30 @@
 import Image from 'next/image';
 import Router from 'next/router';
+import { useContext } from 'react';
+import { ProductContext } from '../../../context/ProductContext';
 import { Product } from '../../../interfaces/interfaces';
 import { Card, BoxInfo, Button } from './ProductCardStyle';
 
 type props = { product: Product };
 
 export const ProductCard = ({ product }: props) => {
+  const { setCart } = useContext(ProductContext);
   const redirectPage = () => {
     const url = product.name.split(' ').join('-');
     Router.push(`/product/${url}`);
+  };
+
+  const addProductCart = (productCard: Product) => {
+    if (localStorage.getItem('wineCard')) {
+      const cartLocal = localStorage.getItem('wineCard');
+      const cart = JSON.parse(cartLocal as string);
+      cart.push(productCard);
+      localStorage.setItem('wineCard', JSON.stringify(cart));
+      setCart(cart);
+    } else {
+      localStorage.setItem('wineCard', JSON.stringify([productCard]));
+      setCart([productCard]);
+    }
   };
 
   return (
@@ -49,7 +65,7 @@ export const ProductCard = ({ product }: props) => {
           </p>
         </div>
       </BoxInfo>
-      <Button>ADICIONAR</Button>
+      <Button onClick={() => addProductCart(product)}>ADICIONAR</Button>
     </Card>
   );
 };

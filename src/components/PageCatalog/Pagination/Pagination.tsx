@@ -1,69 +1,44 @@
-import styled from 'styled-components';
+import { useContext, useEffect, useState } from 'react';
+import { ProductContext } from '../../../context/ProductContext';
+import { PaginationDiv, ButtonPage } from './PaginationStyled';
 
-const PaginationDiv = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
+export const Pagination = () => {
+  const { pages, fetchProducts } = useContext(ProductContext);
+  const [arrayPages, setArrayPages] = useState([] as number[]);
+  const [pageActive, setPageActive] = useState(1);
 
-  .button-pagination {
-    height: 100px;
-  }
+  const clickPage = async (pageNumber: number) => {
+    setPageActive(pageNumber);
+    await fetchProducts(pageNumber);
+  };
 
-  span {
-    color: #b6116e;
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    font-size: 30px;
-    line-height: 9px;
-    margin-left: 2px;
-    margin-right: 10px;
-  }
+  useEffect(() => {
+    const pagesArray: number[] = [];
+    for (let pagesN = 1; pagesN <= pages; pagesN += 1) {
+      pagesArray.push(pagesN);
+    }
+    setArrayPages(pagesArray);
+  }, [pages]);
 
-  @media (max-width: 412.98px) {
-    display: none;
-  }
-
-  @media (min-width: 413px) and (max-width: 531.98px) {
-    display: none;
-  }
-`;
-
-const ButtonPage = styled.button<{ active: Boolean }>`
-  background-color: ${({ active }) => (active ? '#b6116e' : 'shite')};
-  border: 1px solid #b6116e;
-  border-radius: 3px;
-  margin-right: 8px;;
-  padding: 17px 19px;
-
-  color: ${({ active }) => (active ? 'white' : '#b6116e')};
-  font-family: 'Lato', sans-serif;
-  font-size: 19px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 19px;
-`;
-
-const ButtonNext = styled.button`
-  background: none;
-  border: none;
-  border-radius: 3px;
-
-  color: #b6116e;
-  font-family: 'Lato', sans-serif;
-  font-size: 19px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 19px;
-`;
-
-export const Pagination = () => (
-  <PaginationDiv>
-    <div className="button-pagination">
-      <ButtonPage active>1</ButtonPage>
-      <ButtonPage active={false}>2</ButtonPage>
-      <ButtonPage active={false}>3</ButtonPage>
-      <span>...</span>
-      <ButtonNext>{'Próximo >>'}</ButtonNext>
-    </div>
-  </PaginationDiv>
-);
+  return (
+    <PaginationDiv>
+      <div className="button-pagination">
+        {
+          arrayPages.map((page) => (
+            <ButtonPage
+              active={pageActive === page}
+              onClick={() => clickPage(page)}
+            >
+              {page}
+            </ButtonPage>
+          ))
+        }
+        {/* <ButtonPage active>1</ButtonPage>
+        <ButtonPage active={false}>2</ButtonPage>
+        <ButtonPage active={false}>3</ButtonPage>
+        <span>...</span>
+        <ButtonNext>{'Próximo >>'}</ButtonNext> */}
+      </div>
+    </PaginationDiv>
+  );
+};

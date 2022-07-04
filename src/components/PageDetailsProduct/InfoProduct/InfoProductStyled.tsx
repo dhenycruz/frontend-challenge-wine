@@ -175,7 +175,7 @@ export const ComentSommelier = styled.div`
   }
 `;
 
-export const ButtonAdd = styled.div`
+export const ButtonAdd = styled.div<{ disabled: Boolean }>`
   background-color: #7ebc43;
   border-radius: 4px;
   display: flex;
@@ -194,6 +194,22 @@ export const ButtonAdd = styled.div`
     width: 49%;
   }
 
+  .product-qty button {
+    align-items: center;
+    color: white;
+    cursor: pointer;
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 24px;
+    display: flex;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 27.24;
+    justify-content: center;
+    height: 28px;
+    width: 28px;
+  }
+
   .product-qty span {
     align-items: center;
     color: white;
@@ -209,7 +225,7 @@ export const ButtonAdd = styled.div`
   }
 
   .product-qty .disabled {
-    opacity: 50%;
+    opacity: ${({ disabled }) => (disabled ? '50%' : '100%')};
   }
 
   .product-qty .quantity {
@@ -230,7 +246,10 @@ export const ButtonAdd = styled.div`
 
   .button {
     align-items: center;
+    background: none;
+    border: none;
     color: white;
+    cursor: pointer;
     display: flex;
     font-family: 'Lato', sans-serif;
     font-style: normal;

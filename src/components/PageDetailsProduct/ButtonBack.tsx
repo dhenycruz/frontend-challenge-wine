@@ -1,10 +1,12 @@
 import styled from 'styled-components';
+import Router from 'next/router';
 
 const DivButtonBack = styled.div`
   display: flex;
   align-items: center;
   width: 100%;
   height: 50px;
+  cursor: pointer;
 
   span {
     margin-left: 160px;
@@ -34,7 +36,7 @@ const DivButtonBack = styled.div`
 `;
 
 export const ButtonBack = () => (
-  <DivButtonBack>
+  <DivButtonBack onClick={() => Router.push('/')}>
     <span>{'<'}</span>
     <p>Voltar</p>
   </DivButtonBack>

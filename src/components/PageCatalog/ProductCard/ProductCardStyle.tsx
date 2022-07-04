@@ -22,6 +22,9 @@ export const BoxInfo = styled.div`
   width: 265;
   cursor: pointer;
 
+  &:hover{
+    box-shadow: 0px 9.73384px 14.6008px #b6116f52;
+  }
   .ImageProduct {
     height: 186.89px;
     display: flex;
@@ -120,6 +123,7 @@ export const Button = styled.button`
   border-radius: 3.89px;
   padding: 12px 23px;
   bottom: 0;
+  cursor: pointer;
 
   color: white;
   font-family: 'Lato', sans-serif;
@@ -127,6 +131,10 @@ export const Button = styled.button`
   font-weight: 900;
   font-size: 14px;
   line-height: 16px;
+
+  &:hover {
+    background-color: #6fcc18;
+  }
 
   @media (max-width: 412.98px) {
     width: 160px;

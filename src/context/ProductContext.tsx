@@ -7,9 +7,14 @@ import { getProducts } from '../services/APIREQUEST';
 type Props = { children: ReactNode };
 
 interface IProductContext {
-  fetchProducts(): Promise<void>,
+  // eslint-disable-next-line no-unused-vars
+  fetchProducts(page: number): Promise<void>,
   products: Product[],
   totalProducts: number,
+  pages: number,
+  cart: Product[],
+  // eslint-disable-next-line no-unused-vars
+  setCart(param: Product[]): void,
 }
 
 export const ProductContext = createContext<IProductContext>({} as IProductContext);
@@ -17,17 +22,23 @@ export const ProductContext = createContext<IProductContext>({} as IProductConte
 export const ProductProvider = ({ children }: Props) => {
   const [products, setProducts] = useState([] as Product[]);
   const [totalProducts, setTotalProducts] = useState(0);
+  const [pages, setTotalPages] = useState(0);
+  const [cart, setCart] = useState([] as Product[]);
 
   const fetchProducts = async (page = 1): Promise<void> => {
-    const { items, totalItems }: ReturnProducts = await getProducts(page);
+    const { items, totalItems, totalPages }: ReturnProducts = await getProducts(page);
     setProducts(items);
     setTotalProducts(totalItems);
+    setTotalPages(totalPages);
   };
 
   const values = useMemo(() => ({
     fetchProducts,
     products,
     totalProducts,
+    pages,
+    setCart,
+    cart,
   }), [fetchProducts]);
 
   useEffect(() => { fetchProducts(1); }, []);
