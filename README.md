@@ -22,16 +22,18 @@ De que coisas você precisa para instalar o software e como instalá-lo?
     `git clone git@github.com:dhenycruz/frontend-challenge-wine.git`
 
 
+
   - Instalando as dependências
-    - Depois de ter clonado o repositório entra na pasta do projeto e instale suas dependências
+    - Após ter clonado o repositório entra na pasta do projeto e instale as suas dependências
       `cd frontend-challenge-wine && npm install`
       
   - Iniciando a nossa aplicação
-    - Há duas maneiras de fazer rodar nosso frontend, uma como modo desenvolvedor e outra buildando a aplicação e depois dando npm start.
+    - Há duas maneiras de fazer rodar o nosso frontend, uma como modo desenvolvedor e outra buildando a aplicação e depois dando npm start.
       - Modo desenvolvedor:
         `npm run dev`
       - Rodando build:
         `npm run build && npm start`
+
 
 
 Assim a nossa aplicação estará rodando localmente
@@ -42,7 +44,7 @@ Assim a nossa aplicação estará rodando localmente
 
 ## 📦 Desenvolvimento
 
-Para desenvolver essa aplicação primeiro criei meu setup local: Criando uma app Next.js com TypeSctript, dei init no git e fui instalando as dependencias que iria utilizar de príncipio, como axios, styledcomponents, eslint, também utilizei a biblioteca CommitLint para deixar meus commits padronizado, depois criei meu repositóri remoto e deixei sicronizado meu repositório remoto com o local.
+Para desenvolver essa aplicação primeiro criei o meu setup local: criando uma app Next.js com TypeSctript, dei init no git e fui instalando as dependencias que iria utilizar de princípio como axios, styledcomponents, eslint, também utilizei a biblioteca CommitLint para deixar os meus commits padronizado, depois criei o meu repositóri remoto e deixei sicronizado o meu repositório remoto com o local.
 Para desenvolver a aplicação e aproveitar melhor o tempo, eu prefiri criar todo layout estático e responsível e quando o layout estava pronto comecei a fazer as requisições na api e deixar as páginas criadas dinâmicas e por fim fui implementando as funcionalidades como adicionar produto no carrinho, aumentar a quantidade de produtos na página de detalhes para depois adicionar no carrinho.
 
 ## 🛠️ Construído com
@@ -54,17 +56,19 @@ Para desenvolver a aplicação e aproveitar melhor o tempo, eu prefiri criar tod
   - COMMITLINT
 
 
+
 ## Desafios
 
-O maior desafio nesse projeto, foi administrar o tempo, para ter melhor aproveito, maténdo foco nas partes principais da aplicação. Como por exemplo a listagem dos produtos, a paginação e a página de detalhes do produto e deixando tudo responśivel.
+O maior desafio nesse projeto, foi administrar o tempo, para ter melhor aproveito, maténdo foco nas partes principais da aplicação. Como, por exemplo a listagem dos produtos, a paginação e a página de detalhes do produto e deixando tudo responśivel.
 
 ---
 
-<img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/26901028?s=400&u=d99619f0fcc7ff7d8407ff05a0e90a0149f959ee&v=4" width="100px;" alt=""/>
+
  
  Dheniarley Cruz 🚀
 
 Desenvolvedor Full Stack 
+
 
 
 Entre em contato!
