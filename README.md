@@ -1,34 +1,73 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Front end challenge - Wine
 
-## Getting Started
+O desafio será implementar um e-commerce para venda de vinhos que deverá ter as seguintes funcionalidades:
+ - Catálogo de produtos com paginação
+ - Filtragem produtos por preço
+ - Busca por nome do produto
+ - Adicionar e remover produtos do carrinho
 
-First, run the development server:
+## 🚀 Começando
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+Essas instruções permitirão que você obtenha uma cópia do projeto em operação na sua máquina local para fins de desenvolvimento e teste.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 📋 Pré-requisitos
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+De que coisas você precisa para instalar o software e como instalá-lo?
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+- Nodejs e git instalados na sua máquina.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### 🔧 Instalação
 
-## Learn More
+  - Com o terminal aberto, vamos clonar o repositório
+    `git clone git@github.com:dhenycruz/frontend-challenge-wine.git`
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+  - Instalando as dependências
+    - Depois de ter clonado o repositório entra na pasta do projeto e instale suas dependências
+      `cd frontend-challenge-wine && npm install`
+      
+  - Iniciando a nossa aplicação
+    - Há duas maneiras de fazer rodar nosso frontend, uma como modo desenvolvedor e outra buildando a aplicação e depois dando npm start.
+      - Modo desenvolvedor:
+        `npm run dev`
+      - Rodando build:
+        `npm run build && npm start`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+Assim a nossa aplicação estará rodando localmente
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Também temos o deploy da aplicação
+  - Aplicação
+    * https://frontend-wine-dheniarleycruz.herokuapp.com/
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## 📦 Desenvolvimento
+
+Para desenvolver essa aplicação primeiro criei meu setup local: Criando uma app Next.js com TypeSctript, dei init no git e fui instalando as dependencias que iria utilizar de príncipio, como axios, styledcomponents, eslint, também utilizei a biblioteca CommitLint para deixar meus commits padronizado, depois criei meu repositóri remoto e deixei sicronizado meu repositório remoto com o local.
+Para desenvolver a aplicação e aproveitar melhor o tempo, eu prefiri criar todo layout estático e responsível e quando o layout estava pronto comecei a fazer as requisições na api e deixar as páginas criadas dinâmicas e por fim fui implementando as funcionalidades como adicionar produto no carrinho, aumentar a quantidade de produtos na página de detalhes para depois adicionar no carrinho.
+
+## 🛠️ Construído com
+  - NEXT.JS
+  - AXIOS
+  - STYLED-COMPONENTS
+  - TYPESCRIPT
+  - ESLINT
+  - COMMITLINT
+
+
+## Desafios
+
+O maior desafio nesse projeto, foi administrar o tempo, para ter melhor aproveito, maténdo foco nas partes principais da aplicação. Como por exemplo a listagem dos produtos, a paginação e a página de detalhes do produto e deixando tudo responśivel.
+
+---
+
+<img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/26901028?s=400&u=d99619f0fcc7ff7d8407ff05a0e90a0149f959ee&v=4" width="100px;" alt=""/>
+ 
+ Dheniarley Cruz 🚀
+
+Desenvolvedor Full Stack 
+
+
+Entre em contato!
+
+[![Linkedin Badge](https://img.shields.io/badge/-Dheniarley-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/dheniarley/)](https://www.linkedin.com/in/dheniarley//) 
+[![Gmail Badge](https://img.shields.io/badge/-dheniarley.ds@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:dheniarley.ds@gmail.com)](mailto:dheniarley.ds@gmail.com)
